@@ -1,4 +1,4 @@
-# Laravel 10 後臺管理 Friendly Captcha 登入
+# Laravel 11 後臺管理 Friendly Captcha 登入
 
 Friendly Captch 無需要求使用者互動，就能偵測您網站上因機器人濫用而產生的流量，使用者完全無需停下進行人機驗證，藉此讓真人使用者能盡情瀏覽您的網站，絲毫不受提問干擾。
 
@@ -35,8 +35,8 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/9vVy6rT.png)
+![](https://i.imgur.com/xhDwzWc.png)
 > Friendly Captcha 服務依據您的網站中網頁上的活動，更準確地判斷要求是來自人類或機器人
 
-![](https://i.imgur.com/exnkz4u.png)
+![](https://i.imgur.com/fBXVqd8.png)
 > 可防止自動化軟體在網站上進行濫用活動

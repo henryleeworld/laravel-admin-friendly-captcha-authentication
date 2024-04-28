@@ -2,7 +2,7 @@
 
 namespace App\Rules;
 
-use App\Services\FriendlyCaptchaService as FriendlyCaptchaClient;
+use App\Http\Integrations\FriendlyCaptcha\FriendlyCaptchaConnector as FriendlyCaptchaClient;
 use Illuminate\Contracts\Validation\Rule;
 
 class FriendlyCaptchaRule implements Rule

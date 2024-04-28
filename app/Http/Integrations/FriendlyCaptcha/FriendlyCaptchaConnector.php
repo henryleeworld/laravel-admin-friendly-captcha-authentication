@@ -1,50 +1,50 @@
 <?php
 
-namespace App\Services;
+namespace App\Http\Integrations\FriendlyCaptcha;
 
 use GuzzleHttp\Client;
 
-class FriendlyCaptchaService
+class FriendlyCaptchaConnector
 {
     /**
      * FriendlyCaptcha secret
      *
      * @var string
      */
-    protected $secret;
+    protected string $secret;
 
     /**
      * FriendlyCaptcha sitekey
      *
      * @var string
      */
-    protected $sitekey;
+    protected string $sitekey;
 
     /**
      * FriendlyCaptcha verify endpoint
      */
-    protected $verify;
+    protected string $verify;
 
     /**
      * error messages
      *
      * @var array
      */
-    protected $error = [];
+    protected array $error = [];
 
-    public $isSuccess = false;
+    public bool $isSuccess = false;
 
     /**
      * @var \GuzzleHttp\Client
      */
-    protected $http;
+    protected Client $http;
 
     public function __construct()
     {
-        $this->secret   = config('friendlycaptcha.secret');
-        $this->sitekey  = config('friendlycaptcha.sitekey');
-        $this->verify   = config('friendlycaptcha.verify_endpoint');
-        $this->http     = new Client(config('friendlycaptcha.options'));
+        $this->secret  = config('services.friendly_captcha.secret');
+        $this->sitekey = config('services.friendly_captcha.sitekey');
+        $this->verify  = config('services.friendly_captcha.verify_endpoint');
+        $this->http    = new Client(config('services.friendly_captcha.options'));
     }
 
     /**
