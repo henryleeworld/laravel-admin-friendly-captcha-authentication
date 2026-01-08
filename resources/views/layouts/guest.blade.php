@@ -26,7 +26,7 @@
         </div>
         <!-- Scripts -->
         @vite(['resources/js/app.js'])
-        <script type="module" src="https://unpkg.com/friendly-challenge@0.9.15/widget.module.min.js" async defer></script>
-        <script nomodule src="https://unpkg.com/friendly-challenge@0.9.15/widget.min.js" async defer></script>
+        <script type="module" src="https://unpkg.com/friendly-challenge@0.9.19/widget.module.min.js" async defer></script>
+        <script nomodule src="https://unpkg.com/friendly-challenge@0.9.19/widget.min.js" async defer></script>
     </body>
 </html>

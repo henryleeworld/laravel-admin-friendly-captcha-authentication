@@ -24,16 +24,16 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
+        <div class="mt-4">
+            <div data-lang="{{ config('app.locale') }}" data-puzzle-endpoint="{{ config('services.friendly_captcha.puzzle_endpoint') }}" data-sitekey="{{ config('services.friendly_captcha.sitekey') }}" class="frc-captcha" style="max-width: 100%!important;"></div>
+        </div>
+
         <!-- Remember Me -->
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
                 <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
             </label>
-        </div>
-
-        <div class="block mt-4">
-            <div data-lang="{{ config('app.locale') }}" data-puzzle-endpoint="{{ config('services.friendly_captcha.puzzle_endpoint') }}" data-sitekey="{{ config('services.friendly_captcha.sitekey') }}" class="frc-captcha" style="max-width: 100%!important;"></div>
         </div>
 
         <div class="flex items-center justify-end mt-4">

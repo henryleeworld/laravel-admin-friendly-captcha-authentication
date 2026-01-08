@@ -11,13 +11,22 @@ class FriendlyCaptchaRule implements Rule
 
     protected array $messages = [];
 
+    /**
+     * Constructor.
+     */
     public function __construct(
         FriendlyCaptchaClient $friendlyCaptcha
     ) {
         $this->friendlyCaptchaClient = $friendlyCaptcha;
     }
 
-    public function passes($attribute, $value)
+    /**
+     * Determine if the validation rule passes.
+     *
+     * @param  string  $attribute
+     * @param  mixed  $value
+     */
+    public function passes($attribute, $value): bool
     {
         $response = $this->friendlyCaptchaClient->verifyResponse($value);
 
@@ -32,7 +41,10 @@ class FriendlyCaptchaRule implements Rule
         return false;
     }
 
-    public function message()
+    /**
+     * Get the validation error message.
+     */
+    public function message(): string
     {
         return $this->messages;
     }

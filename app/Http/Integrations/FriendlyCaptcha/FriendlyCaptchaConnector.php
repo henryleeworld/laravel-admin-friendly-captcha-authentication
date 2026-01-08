@@ -51,10 +51,8 @@ class FriendlyCaptchaConnector
      * Verify FriendlyCaptcha response.
      *
      * @param string $solution
-     *
-     * @return bool
      */
-    public function verifyRequest($solution)
+    public function verifyRequest($solution): bool
     {
         return $this->verifyResponse(
             $solution,
@@ -65,10 +63,8 @@ class FriendlyCaptchaConnector
      * Verify FriendlyCaptcha response.
      *
      * @param string $solution
-     *
-     * @return self
      */
-    public function verifyResponse($solution)
+    public function verifyResponse($solution): self
     {
         if (empty($solution)) {
             return false;
@@ -103,10 +99,8 @@ class FriendlyCaptchaConnector
      * Send verify request.
      *
      * @param array $data
-     *
-     * @return array
      */
-    protected function sendRequestVerify(array $data = [])
+    protected function sendRequestVerify(array $data = []): array
     {
         $response = $this->http->request('POST', $this->verify, [
             'form_params' => $data,
@@ -115,7 +109,7 @@ class FriendlyCaptchaConnector
         return json_decode($response->getBody(), true);
     }
 
-    public function isSuccess()
+    public function isSuccess(): bool
     {
         return $this->isSuccess;
     }

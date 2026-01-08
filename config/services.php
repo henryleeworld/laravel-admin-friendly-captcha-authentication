@@ -13,6 +13,7 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
+
     'friendly_captcha' => [
         'secret'            => env('FRIENDLY_CAPTCHA_SECRET'),
         'sitekey'           => env('FRIENDLY_CAPTCHA_SITEKEY'),
